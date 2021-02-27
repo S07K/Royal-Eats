@@ -6,22 +6,63 @@ body
 }
 nav
 {
-    padding: 10px;
+    width: 100vw ;
+    height: auto ;
+    position: fixed;
+    padding: 5px 10px 5px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: rgba(0, 0, 0, 0.5);
 }
 #brand
 {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Cinzel', serif;
+}
+#brand:hover
+{
+    cursor:pointer;
+    transform: scale(1.05);
+    transition: 0.5s;
+}
 
+#logo
+{
+    width:70px;
+    height:70px;
+    transform: scale(1)
 }
 #links
 {
     list-style-type: none;
     display: flex;
-    padding: 5px
+    margin-right: 40px; 
+    padding: 5px;
+    font-family: 'Cinzel', serif;
 }
 #links li
 {
+    color:white;
     padding: 5px;
+}
+#links li:hover
+{
+    color:wheat;
+    cursor:pointer;
+}
+#front
+{
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1516865131505-4dabf2efc692?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1190&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#menu
+{
+    height:100vh;
+    
 }
