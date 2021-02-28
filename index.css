@@ -296,6 +296,7 @@ nav
     }
     nav
     {
+      width: auto;
       position:relative;
     }
   }
