@@ -3,6 +3,7 @@ body
     margin: 0;
     background: black;
     color: wheat;
+    font-family: 'Cinzel', serif;
 }
 nav
 {
@@ -14,6 +15,7 @@ nav
     align-items: center;
     justify-content: space-between;
     background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
 }
 #brand
 {
@@ -29,7 +31,6 @@ nav
     transform: scale(1.05);
     transition: 0.5s;
 }
-
 #logo
 {
     width:70px;
@@ -56,13 +57,255 @@ nav
 }
 #front
 {
+    width: 100%;
     height: 100vh;
     background: url("https://images.unsplash.com/photo-1516865131505-4dabf2efc692?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1190&q=80");
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 0 0 10px 0 rgb(66, 66, 66);
+    display:flex;
+}
+#chef
+{
+    width: 50%;
+    height: auto;
+    padding: 87px 10px 10px 10px;
+}
+#chef img
+{
+  width: 100%;
+  height:auto;
 }
 #menu
 {
-    height:100vh;
-    
+    width: 100%;
+    height: auto;
 }
+#menu h1
+{
+    padding-top: 70px;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+#menu-container
+{
+    height:auto; 
+    padding: 20px 75px; 
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(2,auto);
+    align-items: center;
+    justify-items: center;
+}
+
+.container 
+{
+    position: relative;
+    height: auto;
+    margin: 20px;
+    box-shadow: 0 0 5px 0 wheat;
+  }
+  
+  .image 
+  {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay 
+  {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .container:hover .overlay 
+  {
+    opacity: 1;
+    cursor:pointer;
+  }
+  
+  .text 
+  {
+    color: white;
+    font-size: 50px;
+    font-family: 'Cinzel', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  #about
+  {
+    height: auto;
+    padding: 20px;
+    background: url(https://images.unsplash.com/photo-1593160688806-4a3604ef4cbd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 10px 0 wheat;
+  }
+  #about-container
+  {
+    width: inherit;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px;
+    color: honeydew;
+    background-color: rgba(66, 64, 64, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display:flex;
+  }
+  #contact
+  {
+    width: inherit;
+    height: 100vh;
+    background: rgb(245, 222, 179);
+    color: black;
+    padding: 30px 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+  input[type="email"] 
+  {
+    width: 100%;
+    line-height: 40px;
+    font-size: medium;
+    padding: 1px 2px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  input:focus
+  {
+    border: 1px solid wheat;
+  }
+  textarea
+  {
+    line-height: 80px;
+    font-size: large;
+  }
+  button
+  {
+    width: 100%;
+    height:50px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background: seagreen;
+    border-color: wheat;
+  }
+  .fa-paper-plane
+  {
+    color: White;
+  }
+  .fa
+  {
+    font-size: 30px;
+  }
+  button:hover
+  {
+    background: darkgreen;
+    border-color: darkgreen;
+  }
+  @media (max-width : 1140px)
+  {
+    #about
+    {
+      height:auto
+    }
+    #about-container
+    {
+      flex-direction: column;
+    }
+    #about-us-logo
+    {
+      width: 100%;
+      margin: 0 !important;
+      float: none !important;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #contact
+    {
+      padding:10px;
+    }
+    #menu-container
+    {
+        height:auto; 
+        padding: 20px 75px; 
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(3,auto);
+        align-items: center;
+        justify-items: center;
+    }
+    nav
+    {
+      flex-direction: column;
+      padding:10px;
+    }
+    #links
+    {
+      margin: 10px;
+    }
+  }
+
+  @media (max-width: 590px)
+  {
+    #front
+    {
+      flex-direction: column;
+    }
+    #about-container div img
+    {
+      width:100%;
+      height: auto;
+      padding: 10px;
+    }
+    #about-container div
+    {
+      margin: 0 !important;
+    }
+    #menu-container
+    {
+        height:auto; 
+        padding: 20px; 
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(6,auto);
+        align-items: center;
+        justify-items: center;
+    }
+    .container .overlay 
+    {
+      opacity: 1;
+      cursor:pointer;
+    }
+    .textr
+    {
+      font-size: 17px;
+    }
+    p
+    {
+      font-size: 13px !important;
+    }
+    nav
+    {
+      position:relative;
+    }
+  }
